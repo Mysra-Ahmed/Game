@@ -8,13 +8,13 @@ const sentenceElement = document.getElementById("sentence");
 const typingInput = document.getElementById("typingInput");
 const timerElement = document.getElementById("timer");
 const winnerElement = document.getElementById("winner");
-let timeLeft = 15;
+let timeLeft = 60;
 let currentSentence = sentences[Math.floor(Math.random() * sentences.length)];
 sentenceElement.textContent = currentSentence;
 
 let timer = setInterval(() => {
     timeLeft--;
-    timerElement.textContent = Time Left: ${timeLeft}s;
+    timerElement.textContent = `Time Left: ${timeLeft}s`;
     if (timeLeft === 0) {
         clearInterval(timer);
         winnerElement.textContent = "⏳ Time's up! Try again.";
@@ -26,5 +26,5 @@ typingInput.addEventListener("input", function() {
         clearInterval(timer);
         winnerElement.textContent = "🎉 You Win! 🎉";
         typingInput.style.background = "#00C9A7";
-    }
+    }
 });
