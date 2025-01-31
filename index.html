@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typing Battle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Speed Typing Battle ⚡</h1>
+        <p class="subtitle">Challenge your speed and accuracy against time!</p>
+        <input type="text" id="codeInput" placeholder="Enter room code">
+        <button id="joinButton">Join Game</button>
+    </div>
+    <script>
+        document.getElementById("joinButton").addEventListener("click", function() {
+            window.location.href = "game.html";
+        });
+    </script>
+</body>
+</html> 
